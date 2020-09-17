@@ -18,7 +18,22 @@ int sum_n(int n) {
     return n+sum_n(n-1);
   }
 }
-  
+void print_n(const char *s, int n) {
+  if (n <= 0) {
+    return;
+  }
+  else{
+    printf("%s\n", s );
+    print_n(s, n-1);
+  }
+}
+
+int main(void){
+  int N=atoi(readline("Enter an int: "));
+  printf("sum is %i.\n",sum_n(N));
+  char *S=readline("Enter a string: ");
+  print_n(S,N);
+}
 
 
   
