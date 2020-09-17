@@ -18,6 +18,7 @@ int sum_n(int n) {
     return n+sum_n(n-1);
   }
 }
+
 void print_n(const char *s, int n) {
   if (n <= 0) {
     return;
